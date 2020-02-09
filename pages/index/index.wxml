@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <image src="/imgs/avatar.png" class="user-avatar"></image>
+  <text class="username">hello,cxk</text>
+  <view class="moto-container">
+    <text class="moto">开启篮球之旅 </text>
+  </view>
+</view>
