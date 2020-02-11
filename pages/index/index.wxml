@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view class="container">
-  <image src="/imgs/avatar.png" class="user-avatar"></image>
-  <text class="username">hello,cxk</text>
-  <view class="moto-container">
-    <text class="moto">开启篮球之旅 </text>
+  <image src="https://img3.mukewang.com/5b76b51000014f3607500562-140-140.jpg" class="user-avatar"></image>
+  <text class="username">hello,MY</text>
+  <view class="moto-container" bind:tap="onTap">
+    <text class="moto">开启小程序之旅 </text>
   </view>
 </view>

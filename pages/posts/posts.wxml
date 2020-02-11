@@ -1,0 +1,33 @@
+<view>
+  <swiper indicator-dots="true" indicator-color="rgba(0,0,0,.2)" indicator-active-color="#fff" autoplay="true" circular="true">
+    <swiper-item>
+      <image src="https://img.mukewang.com/5e40bbba00011da318720764.jpg"/>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://img.mukewang.com/5e32a57800013c4d18720764.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://img.mukewang.com/5e0dab7a000101d218720764.jpg"></image>
+    </swiper-item>
+  </swiper>
+
+    <view class="post-container" wx:for="{{list}}">
+      <view class="post-author">
+        <image src="{{item.author.img}}" ></image>
+        <text>{{item.author.name}}</text>
+        
+      </view>
+      <text class="post-title">{{item.title}}</text>
+      <view class="post-img-wrapper">
+        <image src="{{item.img}}" class="post-img"></image>
+        <view class="post-info">
+          <image src="/imgs/level.png" class="post-icon"></image>
+          <text>{{item.level}}</text>
+          <image src="/imgs/people.png" class="post-icon"></image>
+          <text>{{item.people}}</text>
+          
+        </view>
+      </view>
+      
+    </view>
+</view>

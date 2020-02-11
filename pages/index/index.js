@@ -3,5 +3,9 @@
 const app = getApp()
 
 Page({
-  
+  onTap(){
+    wx.navigateTo({
+      url: '../posts/posts',
+    })
+  }
 })
