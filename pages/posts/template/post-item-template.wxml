@@ -1,0 +1,21 @@
+<template name="post-item">
+  <view class="post-container">
+    <view class="post-author">
+      <image src="{{item.author.img}}"></image>
+      <text>{{item.author.name}}</text>
+
+    </view>
+    <text class="post-title">{{item.title}}</text>
+    <view class="post-img-wrapper">
+      <image src="{{item.img}}" class="post-img"></image>
+      <view class="post-info">
+        <image src="/imgs/level.png" class="post-icon"></image>
+        <text>{{item.level}}</text>
+        <image src="/imgs/people.png" class="post-icon"></image>
+        <text>{{item.people}}</text>
+
+      </view>
+    </view>
+
+  </view>
+</template>
