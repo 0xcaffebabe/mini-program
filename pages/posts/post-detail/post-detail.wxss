@@ -1,0 +1,120 @@
+
+.header {
+  position: relative;
+  height: 500rpx;
+  background: url(http://img1.sycdn.imooc.com/szimg/5e1d991809c5318e40000800.jpg) no-repeat;
+}
+.title {
+  position: absolute;
+  top: 0;
+  margin-top: 100rpx;
+  width: 100%;
+  color: white;
+  font-size: 44rpx;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 2rpx 6rpx 13rpx rgba(0,0,0,.3);
+}
+.desc {
+  position: absolute;
+  top: 0;
+  padding: 0 40rpx;
+  margin-top: 200rpx;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  text-shadow: 2rpx 6rpx 13rpx rgba(0,0,0,.3);
+}
+.buying {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 160rpx;
+  
+  margin-top: -50rpx;
+  background-color: white;
+  border-radius: 10rpx;
+  box-shadow: 2rpx 6rpx 13rpx rgba(0,0,0,.3);
+}
+.buying button {
+  position: absolute;
+  right: 40rpx;
+  bottom: 30rpx;
+  background-color: #f01414;
+  color: white;
+  height: 100rpx;
+  line-height: 70rpx;
+  border-radius: 50rpx;
+  font-size: 40rpx;
+}
+.amount {
+  color: #f01414;
+  line-height: 160rpx;
+  margin-left: 40rpx;
+  font-size: 50rpx;
+  font-weight: 600;
+}
+.hot {
+  position: absolute;
+  right: -20rpx;
+  top: -20rpx;
+  padding: 10rpx 20rpx;
+  background-image: linear-gradient(90deg,rgba(255,0,105,.99) 0,#ff7a00 99%);
+  color: white;
+  font-size: 22rpx;
+  border-radius: 50rpx;
+}
+.info {
+  border: 1px solid #ccc;
+  background-image: url(http://img1.sycdn.imooc.com/szimg/5e1d991d0835009e09000500.jpg);
+  border-radius: 20rpx;
+  box-shadow: 2rpx 6rpx 13rpx rgba(0,0,0,.3);
+}
+.author {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.author-img {
+  width: 160rpx;
+  height: 160rpx;
+  margin-top: 60rpx;
+  border-radius: 50%;
+}
+.author-info {
+  flex: 1;
+  margin-top: 20rpx;
+}
+.author-name,.author-title {
+  display: block;
+  padding: 10rpx 0;
+  color: white;
+  text-align: center;
+}
+.author-name {
+  font-size: 40rpx;
+  font-weight: 600;
+}
+.info-wrapper {
+  padding: 20rpx;
+}
+.course-title,.course-content {
+   padding: 10rpx 20rpx;
+  display: inline-block;
+  color: white;
+}
+.course-title {
+ 
+  font-weight: 600;
+  font-size: 40rpx;
+  
+}
+.course-content {
+  margin-top: 20rpx;
+  padding: 20rpx 20rpx;
+  letter-spacing: 3;
+  color: #eee;
+  font-size: 24rpx;
+}

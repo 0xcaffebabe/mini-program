@@ -1,13 +1,16 @@
 // pages/posts/posts.js
 Page({
-
+  onPostTap(event) {
+    var id = event.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: './post-detail/post-detail?id='+id,
+    })
+  },
   /**
    * 页面的初始数据
    */
   data: {
-    list:[
-     
-    ]
+    list:[]
   },
 
   /**
