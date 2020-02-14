@@ -2,12 +2,14 @@
   <view class="header">
     <text class="title">{{course.title}}</text>
     <text class="desc">{{course.desc}}</text>
+    <image wx:if="{{musicState}}" src="/imgs/play.png" class="music" catchtap="onMusicTap"></image>
+    <image wx:else src="/imgs/pause.png" class="music" catchtap="onMusicTap"></image>
   </view>
   <view class="buying">
     <text class="amount">¥ {{course.amount}}</text>
     <text class="hot">限时特惠</text>
     
-    <button wx:if="{{buy}}" catchtap="onBuyTap">立即购买</button>
+    <button wx:if="{{buy}}" catchtap="onBuyTap" catchlongtap="onBuyLongTap">立即购买</button>
     <button wx:else catchtap="onBuyTap" style="background-color:#ccc">已购买</button>
   </view>
   <view class="info-wrapper">

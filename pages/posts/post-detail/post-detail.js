@@ -1,10 +1,39 @@
 // pages/posts/post-detail/post-detail.js
 Page({
-
+  onMusicTap(){
+    var app =getApp();
+    this.setData({ musicState: !this.data.musicState})
+    app.globalData.musicState = this.data.musicState;
+    var au = wx.getBackgroundAudioManager();
+    au.onPause(()=>{
+      this.setData({ musicState: true })
+    });
+    au.onPlay(()=>{
+      this.setData({ musicState: false })
+    })
+    if (!this.data.musicState){
+      au.title = this.data.course.title;
+      au.src = this.data.course.music;
+      au.play();
+    }else {
+      au.pause();
+    }
+    
+  },
+  onBuyLongTap() {
+    wx.showActionSheet({
+      itemList: ['分享到QQ-100¥', '分享到微信-200¥'],
+      success: res => {
+        wx.showToast({
+          title: '分享成功' + res.tapIndex,
+        })
+      }
+    })
+  },
   onBuyTap() {
     wx.showModal({
       title: '询问',
-      content: this.data.buy ?'是否购买':"是否退货",
+      content: this.data.buy ? '是否购买' : "是否退货",
       confirmText: '确定',
       cancelText: '取消',
       success: ret => {
@@ -33,14 +62,16 @@ Page({
     course: {
 
     },
-    buy: true
+    buy: true,
+    musicState:true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    var app =getApp();
+    this.setData({ musicState: app.globalData.musicState})
     wx.request({
       url: 'https://travel.ismy.wang/api/course.json',
       success: data => {
@@ -68,7 +99,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    
   },
 
   /**
