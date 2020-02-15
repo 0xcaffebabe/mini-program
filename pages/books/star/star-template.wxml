@@ -1,0 +1,9 @@
+
+<template name="star-template">
+  <view class="star-container">
+    <view class="star">
+      <image src="/imgs/{{item==0?'none-star':'star'}}.png" wx:for="{{stars}}"></image>
+      <text class="star-score">{{rank}}</text>
+    </view>
+  </view>
+</template>

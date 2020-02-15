@@ -1,15 +1,10 @@
 <import src="./template/post-item-template.wxml"/>
 <view>
   <swiper indicator-dots="true" indicator-color="rgba(0,0,0,.2)" indicator-active-color="#fff" autoplay="true" circular="true">
-    <swiper-item>
-      <image src="https://img.mukewang.com/5e40bbba00011da318720764.jpg"/>
+    <swiper-item wx:for="{{swiper}}">
+      <image src="{{item}}"/>
     </swiper-item>
-    <swiper-item>
-      <image src="https://img.mukewang.com/5e32a57800013c4d18720764.jpg"></image>
-    </swiper-item>
-    <swiper-item>
-      <image src="https://img.mukewang.com/5e0dab7a000101d218720764.jpg"></image>
-    </swiper-item>
+    
   </swiper>
 
   <block wx:for="{{list}}">

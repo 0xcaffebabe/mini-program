@@ -1,0 +1,7 @@
+@import "./book-list/book-list-template.wxss";
+.book-top-container {
+  background-color: #f2f2f2;
+}
+.book-template {
+  margin-bottom: 30rpx;
+}

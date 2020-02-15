@@ -1,0 +1,6 @@
+<import src="book-list/book-list-template.wxml"/>
+<view class="book-top-container">
+  <view class="book-template" wx:for="{{bookList}}">
+    <template is="book-list-template" data="{{item}}"></template>
+  </view>
+</view>

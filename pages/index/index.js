@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   onTap(){
-    wx.navigateTo({
+    wx.switchTab({
       url: '../posts/posts',
     })
   }

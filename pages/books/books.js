@@ -1,43 +1,40 @@
-// pages/posts/posts.js
+var util = require("../../util/util.js")
 Page({
-  onPostTap(event) {
-    var id = event.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: './post-detail/post-detail?id='+id,
-    })
-  },
+
   /**
    * 页面的初始数据
    */
   data: {
-    list:[],
-    swiper:[]
+   bookList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+      wx.request({
+        url: 'https://travel.ismy.wang/api/book/book.json',
+        success:res=>{
+          
+          var list = res.data.bookList;
+          for (let i =0;i<list.length;i++){
+            
+            for(let j =0;j<list[i].list.length;j++){
+              
+              list[i].list[j].stars = util.convertRange2Star(list[i].list[j].rank);
+            }
+          }
+          console.log(list);
+          this.setData({ bookList:list });
+        }
+      })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    wx.request({
-      url: 'https://travel.ismy.wang/api/post_list.json',
-      success: data => {
-        this.setData({list:data.data.list})
-        console.log(data.data.list);
-      }
-    })
-    wx.request({
-      url: 'https://travel.ismy.wang/api/swiper.json',
-      success: data => {
-        this.setData({ swiper: data.data.swiper })
-      }
-    })
+
   },
 
   /**
@@ -72,7 +69,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-   
+
   },
 
   /**

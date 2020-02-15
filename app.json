@@ -1,11 +1,27 @@
 {
   "pages": [
+    "pages/books/books",
     "pages/index/index",
     "pages/posts/post-detail/post-detail",
     "pages/posts/posts"
     
-    
   ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/posts/posts",
+        "text": "课程",
+        "iconPath":"/imgs/course.png",
+        "selectedIconPath":"/imgs/course.png"
+      },
+      {
+        "pagePath": "pages/books/books",
+        "text": "书籍",
+        "iconPath": "/imgs/book.png",
+        "selectedIconPath": "/imgs/book.png"
+      }
+    ]
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
@@ -13,6 +29,5 @@
     "navigationBarTextStyle": "black"
   },
   "style": "v2",
-
   "sitemapLocation": "sitemap.json"
 }

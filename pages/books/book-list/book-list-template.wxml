@@ -1,0 +1,22 @@
+<import src="../book/book-template.wxml" />
+<template name="book-list-template">
+  <view class="book-list-container">
+    <view class="book-list-inner">
+
+      <view class="book-head">
+        <text class="book-slogan">{{item.sort}}</text>
+        <view class="book-more">
+          <text class="more-text">更多</text>
+          <image src="/imgs/arrow-right.png" class="more-img"></image>
+        </view>
+      </view>
+      <view class="book-list">
+        <view wx:for="{{item.list}}">
+          <template is="book-template" data="{{item}}"></template>
+        </view>
+        
+        
+      </view>
+    </view>
+  </view>
+</template>

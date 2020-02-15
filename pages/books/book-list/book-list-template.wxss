@@ -1,0 +1,34 @@
+@import "../book/book-template.wxss";
+.book-list-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding-bottom: 40rpx;
+}
+.book-list-inner {
+  margin: 0 auto 20rpx;
+}
+.book-head {
+  padding: 30rpx 20rpx 22rpx;
+  
+}
+.book-slogan {
+  font-size: 28rpx;
+}
+.book-more {
+  float: right;
+}
+.more-text {
+  
+  margin-right: 10rpx;
+  color: #1f4ba5;
+}
+.more-img {
+  width: 9rpx;
+  height: 16rpx;
+  vertical-align: middle;
+}
+.book-list {
+  display: flex;
+  flex-direction: row;
+}
