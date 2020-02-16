@@ -1,6 +1,15 @@
 <import src="book-list/book-list-template.wxml"/>
-<view class="book-top-container">
+<import src="book-grid/book-grid-template.wxml"/>
+<view class="search">
+  <icon type="search" color="#405f88" class="search-icon"></icon>
+  <input placeholder="微服务设计" placeholder-class="placeholder-class" bindfocus="onFoucs"  bindchange="onChange"  />
+  <image src="/imgs/xx.png" style="" bindtap="xxTap" class="close-img" wx:if="{{searchShow}}"/>
+</view>
+<view class="book-top-container" wx:if="{{!searchShow}}">
   <view class="book-template" wx:for="{{bookList}}">
     <template is="book-list-template" data="{{item}}"></template>
   </view>
+</view>
+<view class="search-panel" wx:if="{{searchShow}}">  
+    <template is="book-grid-template" data="{{books:searchResult.list}}"/>
 </view>

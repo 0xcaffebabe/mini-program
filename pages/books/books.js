@@ -5,11 +5,32 @@ Page({
       url: './more-book/more-book?category='+e.currentTarget.dataset.category,
     })
   },
+  onFoucs(){
+   this.setData({searchShow:true});
+  },
+  onChange(e){
+    let kw = e.detail.value;
+    wx.request({
+      url: 'https://travel.ismy.wang/api/book/book_category.json?kw='+kw,
+      success:res=>{
+        let data = res.data;
+        this.setData({searchResult:data});
+      }
+    })
+  },
+  xxTap(){
+    this.setData({ searchShow: false });
+    this.setData({ searchResult: {} });
+  },
+ 
+  
   /**
    * 页面的初始数据
    */
   data: {
-   bookList:[]
+   bookList:[],
+   searchResult:{},
+   searchShow:false
   },
 
   /**

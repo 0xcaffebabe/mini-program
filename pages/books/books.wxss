@@ -1,7 +1,38 @@
 @import "./book-list/book-list-template.wxss";
+@import "./book-grid/book-grid-template.wxss";
 .book-top-container {
   background-color: #f2f2f2;
 }
 .book-template {
   margin-bottom: 30rpx;
+}
+.search {
+  background-color: #f2f2f2;
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.search-icon {
+  margin: auto 0 auto 20rpx;
+}
+.search input {
+  margin: auto 0 auto 20rpx;
+}
+.placeholder-class {
+  font-size: 14px;
+  color: #d1d1d1;
+}
+.search-panel {
+  width: 100%;
+  position: absolute;
+  top: 80rpx;
+}
+.close-img {
+  position: absolute;
+  right: 30rpx;
+  top: 25rpx;
+  height: 30rpx;
+  width: 30rpx;
+  
 }
