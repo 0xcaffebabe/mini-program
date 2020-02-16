@@ -1,0 +1,14 @@
+<import src="../book/book-template.wxml" />
+<template name="book-grid-template">
+  <scroll-view class="book-wrapper" scroll-y="true" scroll-x="false" 
+  bindscrolltolower="catchScroll">
+    
+    <block wx:for="{{books}}">
+
+      <view class="single-book-container">
+        <template is="book-template" data="{{item}}" />
+      </view>
+
+    </block>
+  </scroll-view>
+</template>

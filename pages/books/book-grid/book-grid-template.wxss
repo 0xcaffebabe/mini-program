@@ -1,0 +1,10 @@
+@import "../book/book-template.wxss";
+
+.single-book-container {
+  float: left;
+  margin-bottom: 50rpx;
+}
+.book-wrapper {
+  height: 1100rpx;
+  margin: 40rpx 0 40rpx 6px;
+}

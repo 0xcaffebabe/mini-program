@@ -3,16 +3,16 @@
     "pages/books/books",
     "pages/index/index",
     "pages/posts/post-detail/post-detail",
-    "pages/posts/posts"
-    
+    "pages/posts/posts",
+    "pages/books/more-book/more-book"
   ],
   "tabBar": {
     "list": [
       {
         "pagePath": "pages/posts/posts",
         "text": "课程",
-        "iconPath":"/imgs/course.png",
-        "selectedIconPath":"/imgs/course.png"
+        "iconPath": "/imgs/course.png",
+        "selectedIconPath": "/imgs/course.png"
       },
       {
         "pagePath": "pages/books/books",
@@ -27,6 +27,7 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+    
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

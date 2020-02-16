@@ -5,7 +5,7 @@
 
       <view class="book-head">
         <text class="book-slogan">{{item.sort}}</text>
-        <view class="book-more">
+        <view class="book-more" catchtap="onMoreTap" data-category="{{item.sort}}">
           <text class="more-text">更多</text>
           <image src="/imgs/arrow-right.png" class="more-img"></image>
         </view>

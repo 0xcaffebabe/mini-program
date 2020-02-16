@@ -1,0 +1,6 @@
+<import src="../book-grid/book-grid-template.wxml"/>
+<view>
+  <template is="book-grid-template" data="{{books}}"/>
+</view>
+
+
