@@ -1,10 +1,13 @@
 {
   "pages": [
-    "pages/books/books",
     "pages/index/index",
+    "pages/books/book-detail/book-detail",
+    "pages/books/books",
+    
     "pages/posts/post-detail/post-detail",
     "pages/posts/posts",
     "pages/books/more-book/more-book"
+    
   ],
   "tabBar": {
     "list": [
@@ -27,7 +30,6 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
-    
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

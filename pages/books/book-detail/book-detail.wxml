@@ -1,0 +1,38 @@
+<import src="../star/star-template.wxml"/>
+<view class="container">
+  <image class="head-img" src="{{book.img}}" mode="aspectFill"></image>
+  <view class="head-img-hover">
+    <text class="main-title">{{book.title}}</text>
+    <text class="book-author">{{book.author}}</text>
+    <text class="sub-title">{{book.year}}</text>
+    
+  </view>
+  <image class="book-img" src="{{book.img}}"></image>
+  <view class="summary">
+    <text class="book-title">{{book.title}}</text>
+    <template is="star-template" data="{{...book}}"/>
+    <view class="info">
+      <view>
+        <text>页数 </text>
+        <text>{{book.pages}}</text>
+      </view>
+      <view>
+        <text>定价 </text>
+        <text>{{book.price}}</text>
+      </view>
+    </view>
+    
+  </view>
+  <view class="hr"></view>
+  <view class="desc">
+    <text>简介</text>
+    <text class="desc-content">{{book.desc}}</text>
+  </view>
+  <view class="hr"></view>
+  <view class="releate">
+    <text>相关书籍</text>
+    <scroll-view scroll-x="true" class="releate-container">
+      <image wx:for="{{book.releate}}" src="{{item}}" catchtap="onImgTap" data-item="{{item}}"></image>
+    </scroll-view>
+  </view>
+</view>

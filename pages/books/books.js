@@ -1,5 +1,11 @@
 var util = require("../../util/util.js")
 Page({
+  onBookTap(e){
+    
+    wx.navigateTo({
+      url: './book-detail/book-detail?book=' + e.currentTarget.dataset.title,
+    })
+  },
   onMoreTap(e){
     wx.navigateTo({
       url: './more-book/more-book?category='+e.currentTarget.dataset.category,
@@ -21,9 +27,7 @@ Page({
   xxTap(){
     this.setData({ searchShow: false });
     this.setData({ searchResult: {} });
-  },
- 
-  
+  }, 
   /**
    * 页面的初始数据
    */
