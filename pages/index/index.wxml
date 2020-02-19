@@ -1,8 +1,11 @@
 <!--index.wxml-->
 <view class="container">
-  <image src="https://img3.mukewang.com/5b76b51000014f3607500562-140-140.jpg" class="user-avatar"></image>
-  <text class="username">hello,MY</text>
-  <view class="moto-container" bind:tap="onTap">
+  <image src="{{img}}" class="user-avatar"></image>
+  <text class="username">hello,{{name}}</text>
+  <view class="moto-container" bind:tap="onTap" wx:if="{{!name}}">
     <text class="moto">开启小程序之旅 </text>
+  </view>
+  <view class="moto-container" wx:if="{{name}}" bindtap="onIndexTap">
+    <text class="moto">进入首页</text>
   </view>
 </view>

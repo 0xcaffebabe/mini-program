@@ -3,9 +3,23 @@
 const app = getApp()
 
 Page({
-  onTap(){
+  onIndexTap(){
     wx.switchTab({
       url: '../posts/posts',
     })
+  },
+  onTap(){
+    
+    wx.getUserInfo({
+      success:res=>{
+        this.setData({name:res.userInfo.nickName});
+        
+        this.setData({ img: res.userInfo.avatarUrl });
+      }
+    })
+  },
+  data:{
+    name:'',
+    img: ''
   }
 })
