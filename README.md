@@ -4,14 +4,14 @@
 
 ## 运行截图
 
-![](/imgs/preview/1.png)
+![img](/imgs/preview/1.png)
 
-![](/imgs/preview/2.png)
+![img](/imgs/preview/2.png)
 
-![](/imgs/preview/3.png)
+![img](/imgs/preview/3.png)
 
-![](/imgs/preview/4.png)
+![img](/imgs/preview/4.png)
 
-![](/imgs/preview/5.png)
+![img](/imgs/preview/5.png)
 
-![](/imgs/preview/6.png)
+![img](/imgs/preview/6.png)
